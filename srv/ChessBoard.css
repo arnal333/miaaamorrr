@@ -1,0 +1,129 @@
+.chess-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #262421;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.game-header {
+  padding: 16px;
+  background-color: #302e2b;
+  border-bottom: 1px solid #444;
+}
+
+.turn-indicator {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.my-turn {
+  color: #81b64c;
+}
+
+.opponent-turn {
+  color: #b6bfc4;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.room-info {
+  color: #b6bfc4;
+  font-family: monospace;
+  background-color: #3a3a3a;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.reset-button {
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #5a5a5a;
+}
+
+.board-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.board-wrapper > div {
+  width: 100%;
+  max-width: min(95vw, 95vh);
+  margin: 0 auto;
+}
+
+.game-status {
+  padding: 16px;
+  text-align: center;
+  min-height: 60px;
+}
+
+.game-over {
+  color: #ff6b6b;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.check-warning {
+  color: #ffd700;
+  font-size: 16px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #262421;
+  color: white;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #444;
+  border-top: 4px solid #81b64c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.room-id {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #b6bfc4;
+  font-family: monospace;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
